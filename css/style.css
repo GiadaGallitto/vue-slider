@@ -14,7 +14,7 @@
 .item {
     float: left;
     width: 700px;
-    height: 50vh;
+    height: 300px;
     position: relative;
 }
 
@@ -34,29 +34,25 @@
 
 .thumbs {
     float: left;
-    width: calc(100% - 700px);
-    height: 50vh;
+    height: 300px;
     background: #000;
     position: relative;
 }
 
-.thumbs img {
-    width: 100%;
-    height: calc(100% / 5);
+.thumb {
+    height: calc((300px) / 5);
     opacity: 0.5;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: all 0.5s;
 }
 
-.thumbs img.active {
+.thumb.active {
     border: 2px solid #ccc;
     opacity: 1;
-}
-
-.thumbs img:hover{
-    border: 2px solid #ccc;
-    opacity: 1;
-    filter: brightness(120%);
 }
 
 .prev, .next {
