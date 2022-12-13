@@ -53,12 +53,17 @@ createApp({
         changeSlide(currentIndex){
             this.activeIndex = currentIndex;
         },
+
+        pause(){
+            clearInterval(this.timer)
+        }
     },
 
     created(){
-        setInterval(() => {
+        this.timer = setInterval(() => {
             this.nextSlide();
         }, 3000)
     }
+
     
 }).mount(`#app`);
