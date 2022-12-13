@@ -56,6 +56,12 @@ createApp({
 
         pause(){
             clearInterval(this.timer)
+        },
+
+        start(){
+            this.timer = setInterval(() => {
+                this.nextSlide();
+            }, 3000)
         }
     },
 
